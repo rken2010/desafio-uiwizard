@@ -45,8 +45,8 @@ export default async function RootLayout({children,}: {children: React.ReactNode
         <aside>
           <ul>
             {post.map((id)=> (
-              <Suspense fallback={<ListLoading/>}>
-              {<ListItem id={id} key={id}/>}
+              <Suspense fallback={<ListLoading/>} key={id}>
+              {<ListItem id={id} />}
               </Suspense>
             ))}
               
